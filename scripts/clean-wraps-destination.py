@@ -13,6 +13,7 @@ def main():
         "arrivals", "annual_total_all"
     ])
 
+    # Comment added by Steve, split rows where the table stop 
     split_point = _arrivals[
         ~_arrivals["from_date"].str.contains("From: ")
     ].index[0]
